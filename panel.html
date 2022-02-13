@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Judul dan Ikon Situs -->
+	<title>Dashboard - Garuda Admin Kit</title>
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="./dist/style.css" />
+
+	<!-- Addons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+	<div id="app">
+
+		<!-- Sidebar -->
+		<section class="sidebar-wrapper sidebar sidebar-fixed sidebar-primary" data-theme="dark">
+			<div class="sidebar-header">
+				<a href="./index.html">
+					<img class="sidebar-image" src="https://cdn.dasakreativa.web.id/dasakreativa/logo-white.svg" alt="Dasa Kreativa Studio" />
+				</a>
+				<button class="btn btn-link btn-sidebar"><i class="fa-solid fa-bars"></i></button>
+			</div>
+
+			<ul class="sidebar-menu" id="menu">
+				<li class="sidebar-heading">Dashboard</li>
+				<li class="mm-active nav-item">
+					<a href="javascript:void(0)" class="nav-link" aria-expanded="true">
+						<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+						<span class="nav-text">Dashboard</span>
+						<span class="arrow"><i class="fa-solid fa-chevron-right fa-fw"></i></span>
+					</a>
+					<ul class="submenu">
+						<div class="submenu-wrapper">
+							<li class="mm-active nav-item">
+								<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+									<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+									<span class="nav-text">Dashboard</span>
+								</a>
+							</li>
+							<li class="mm-active nav-item">
+								<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+									<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+									<span class="nav-text">Dashboard</span>
+								</a>
+							</li>
+							<li class="mm-active nav-item">
+								<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+									<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+									<span class="nav-text">Dashboard</span>
+								</a>
+							</li>
+						</div>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+						<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+						<span class="nav-text">Dashboard</span>
+						<span class="arrow"><i class="fa-solid fa-chevron-right fa-fw"></i></span>
+					</a>
+					<ul class="submenu">
+						<div class="submenu-wrapper">
+							<li class="nav-item">
+								<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+									<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+									<span class="nav-text">Dashboard</span>
+									<span class="arrow"><i class="fa-solid fa-chevron-right fa-fw"></i></span>
+								</a>
+								<ul class="submenu">
+									<div class="submenu-wrapper">
+										<li class="nav-item">
+											<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+												<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+												<span class="nav-text">Dashboard</span>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+												<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+												<span class="nav-text">Dashboard</span>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+												<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+												<span class="nav-text">Dashboard</span>
+											</a>
+										</li>
+									</div>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+									<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+									<span class="nav-text">Dashboard</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="javascript:void(0)" class="nav-link" aria-expanded="false">
+									<span class="icon-wrap"><i class="fa-solid fa-tachometer-alt fa-fw"></i></span>
+									<span class="nav-text">Dashboard</span>
+								</a>
+							</li>
+						</div>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+		<!-- Overlay on Mobile -->
+		<div class="overlay"></div>
+
+		<!-- Container Wrapper -->
+		<main id="content">
+
+			<div class="top-content">
+				<!-- Navbar Top -->
+				<nav class="navbar navbar-top navbar-expand navbar-light bg-white">
+					<div class="container">
+						<button class="btn btn-link btn-sidebar"><i class="fa-solid fa-bars"></i></button>
+
+						<div class="collapse navbar-collapse" id="navbar-collapse-main">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item dropdown user-info">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarProfile" role="button" data-toggle="dropdown" aria-expanded="false">
+										<img src="https://via.placeholder.com/720x720" alt="User A" />
+										<div class="information">
+											<h3 class="title">John Doe</h3>
+											<p class="roles">Administator</p>
+										</div>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarProfile">
+										<div class="dropdown-header">
+											<img src="https://via.placeholder.com/720x720" alt="User A" />
+											<div class="information">
+												<h3 class="title">John Doe</h3>
+												<p class="roles">Administator</p>
+											</div>
+										</div>
+										<a class="dropdown-item" href="#">Profile</a>
+										<a class="dropdown-item" href="#">Setting</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Logout</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<!-- Bottom Bar -->
+				<div class="navbar-bottom">
+					<div class="container">
+						<h3 class="heading">Beranda Dasbor</h3>
+
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Library</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+
+				<!-- Content Main -->
+				<div id="content-wrapper">
+					<div class="container">
+						Testing
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer class="footer" id="main-footer">
+				<div class="container">
+					<span class="copyright">Hak cipta 2021 - 2022, Garuda Admin Kit.</span>
+				</div>
+			</footer>
+
+		</main>
+	</div>
+
+	<!-- Main Script -->
+	<script src="./dist/main.bundle.js"></script>
+
+	<!-- Addons -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+@include media-breakpoint-down('md') {
+	.overlay {
+		display: flex;
+		width: 100%;
+		height: 100vh;
+		background: rgba($black, .75);
+		z-index: 1000;
+		position: fixed;
+		margin-left: -100%;
+		transition: all .2s;
+		transition-delay: .05s;
+
+		.toggled & {
+			margin-left: 0;
+		}
+	}
+}
+
+.sidebar {
+	width: $sidebar-open-width;
+	min-height: 100vh;
+	transition: all .2s;
+
+	&.sidebar-fixed {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 1010;
+		transition: all .2s;
+	}
+
+	@include media-breakpoint-down('md') {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 1010;
+		transition: all .2s;
+		margin-left: -#{$sidebar-open-width};
+
+		.toggled & {
+			margin-left: 0;
+		}
+	}
+
+	.sidebar-header {
+		padding: 1rem;
+		display: flex;
+		justify-content: center;
+
+		@include media-breakpoint-down('md') {
+			justify-content: space-between;
+		}
+
+		img.sidebar-image {
+			height: 30px;
+			width: auto;
+		}
+
+		button.btn-sidebar {
+			display: none;
+
+			@include media-breakpoint-down('md') {
+				display: block;
+				color: $white;
+			}
+		}
+	}
+
+	&[data-theme=dark] {
+		@each $color, $value in $theme-colors {
+			&.sidebar-#{$color} {
+				background: $value;
+				color: $white;
+				border-right: 1px solid $value;
+
+				.sidebar-menu {
+					margin-top: 1rem;
+					list-style: none;
+					padding: 1rem;
+
+					.sidebar-heading {
+						padding: .5rem 1.25rem;
+						font-weight: bold;
+					}
+
+					>.nav-item {
+						&.mm-active {
+							>.nav-link {
+								background: $white;
+								color: $value;
+								border-radius: .5rem;
+
+								.arrow .fa-chevron-right {
+									transition: all .2s;
+									transform: rotate(90deg);
+								}
+							}
+						}
+
+						>.nav-link {
+							color: lighten($color: $value, $amount: 50%);
+							border-radius: .5rem;
+							transition: all .2s;
+							display: flex;
+							align-items: center;
+
+							&:hover {
+								background: rgba($white, .25);
+								color: lighten($color: $value, $amount: 85%);
+							}
+
+							&:focus {
+								background: $white;
+								color: $value;
+							}
+
+							.nav-text {
+								margin-left: .5rem;
+							}
+
+							.arrow {
+								float: unset;
+								margin-left: auto;
+
+								.fa-chevron-right {
+									transition: all .2s;
+									transform: rotate(0deg);
+								}
+							}
+						}
+
+						.submenu {
+							list-style: none;
+							padding: 0;
+
+							.submenu-wrapper {
+								border-left: 1px solid lighten($value, 15%);
+								margin-left: 1.5rem;
+
+								.nav-item {
+									&.mm-active {
+										>.nav-link {
+											.arrow .fa-chevron-right {
+												transition: all .2s;
+												transform: rotate(90deg);
+											}
+										}
+									}
+
+									.nav-link {
+										display: flex;
+										align-items: center;
+										color: lighten($color: $value, $amount: 50%);
+										transition: all .2s;
+
+										&:hover, &:focus {
+											color: lighten($color: $value, $amount: 85%);
+										}
+
+										.nav-text {
+											margin-left: .5rem;
+										}
+
+										.arrow {
+											float: unset;
+											margin-left: auto;
+
+											.fa-chevron-right {
+												transition: all .2s;
+												transform: rotate(0deg);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

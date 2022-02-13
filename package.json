@@ -1,22 +1,20 @@
 {
-  "name": "bootstrap4-webpack-boilerplate",
-  "version": "1.1.0",
-  "description": "A simple boilerplate using Bootstrap 4, Webpack and Babel.",
+  "name": "garuda-panel",
+  "version": "1.0.0",
+  "description": "A bootstrap admin to make simplest and easier to use",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch",
     "images": "node ./bin/images.js"
   },
-  "author": "Dominik Hanke",
+  "author": "Dasa Kreativa Group",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/noreading/bootstrap4-webpack-boilerplate.git"
-  },
+  "repository": "https://github.com/dasakreativa/gtk-bootstrap",
   "dependencies": {
-    "bootstrap": "^4.5",
+    "bootstrap": "4.6.1",
     "jquery": "^3.5.1",
+    "metismenu": "^3.0.7",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
@@ -40,5 +38,6 @@
     "trash": "^6.1.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
-  }
+  },
+  "private": true
 }

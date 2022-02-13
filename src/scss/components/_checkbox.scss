@@ -1,0 +1,73 @@
+.checkbox {
+	&.checkbox-check {
+		label {
+			cursor: pointer;
+			padding: .75rem 1rem .75rem 2.5rem;
+			border: 1px solid $gray-300;
+			display: flex;
+			border-radius: .25rem;
+			position: relative;
+			transition: all .2s;
+
+			&:before {
+				content: '';
+				width: 1rem;
+				position: absolute;
+				height: 1rem;
+				border: 1px solid $gray-400;
+				border-radius: .25rem;
+				left: 0.75rem;
+				transition: all .2s;
+				top: 0.85rem;
+			}
+
+			&:after {
+				content: '';
+				width: 1rem;
+				position: absolute;
+				height: 1rem;
+				border-radius: .25rem;
+				left: 0.75rem;
+				transition: all .2s;
+				top: 0.85rem;
+				background: 50% / #{$custom-control-indicator-bg-size} no-repeat;
+			}
+
+			&:hover {
+				border-color: rgba($primary, .25);
+
+				&::before {
+					background: rgba($primary, .25);
+					border-color: rgba($primary, .25);
+				}
+			}
+		}
+
+		input {
+			display: none;
+
+			&:disabled ~ label {
+				cursor: not-allowed;
+				opacity: .5;
+
+				&:before {
+					background: $gray-400;
+				}
+			}
+
+			&:checked ~ label {
+				border-color: $primary;
+
+				&:before {
+					background: $primary;
+					color: $white;
+					border-color: $primary;
+				}
+
+				&::after {
+					background-image: escape-svg($custom-checkbox-indicator-icon-checked);
+				}
+			}
+		}
+	}
+}
