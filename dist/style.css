@@ -11320,6 +11320,26 @@ main#content footer.footer {
   margin-top: 1rem;
 }
 
+#app-login {
+  background: #f8f9fa;
+  transition: all .2s;
+}
+
+#app-login * {
+  transition: all .2s;
+}
+
+@media (max-width: 991.98px) {
+  #app-login {
+    padding: 2rem 0;
+  }
+}
+
+#app-login .custom-background {
+  background: url("../../../dist/images/login-bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+
 /*!
 * metismenu https://github.com/onokumus/metismenu#readme
 * A collapsible jQuery menu plugin

@@ -1,0 +1,17 @@
+#app-login {
+	background: $light;
+	transition: all .2s;
+
+	* {
+		transition: all .2s;
+	}
+
+	@include media-breakpoint-down('md') {
+		padding: 2rem 0;
+	}
+
+	.custom-background {
+		background: url('../../../dist/images/login-bg.jpg') no-repeat center center;
+		background-size: cover;
+	}
+}

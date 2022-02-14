@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Judul dan Ikon Situs -->
+	<title>Login - Garuda Admin Kit</title>
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="./dist/style.css" />
+
+	<!-- Addons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+	<div id="app-login">
+		<div class="container">
+			<div class="row min-vh-100 align-items-center justify-content-center">
+				<div class="col-md-8">
+
+					<img src="https://cdn.dasakreativa.web.id/dasakreativa/logo-color.svg" height="50px" class="mb-4 d-block mx-auto" alt="Dasa Kreativa Studio" />
+
+					<div class="card shadow-sm border-0">
+						<div class="row no-gutters">
+							<div class="col-md-5 rounded-left custom-background"></div>
+							<div class="col-md-7">
+								<div class="p-4">
+									<h3>Masuk Dahulu</h3>
+									<p>Silahkan masuk dengan kredensial anda</p>
+
+									<hr>
+
+									<form action="">
+
+										<div class="form-group">
+											<label for="username">Nama Pengguna</label>
+											<input type="text" id="username" name="username" class="form-control" placeholder="Masukkan nama pengguna anda." />
+										</div>
+
+										<div class="form-group">
+											<label for="password">Kata Sandi</label>
+											<input type="text" id="password" name="password" class="form-control" placeholder="Masukkan kata sandi anda." />
+										</div>
+
+										<div class="d-flex mb-3 justify-content-between align-items-center">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="customCheck1">
+												<label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+											</div>
+
+											<a href="javascript:void(0)" class="btn-link btn">Lupa Sandi?</a>
+										</div>
+
+										<button type="submit" class="btn btn-primary"><i class="fa-solid fa-sign-in-alt fa-fw mr-2"></i>Masuk</button>
+
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center mt-4">
+						<p class="mb-2">Belum ada akun? Mendaftar <a href="javascript:void(0)">disini</a></p>
+						<p class="mb-0">Hak Cipta 2022, <a href="javascript:void(0)">Garuda Admin Kit</a>. Dibuat oleh <a href="javascript:void(0)">Programmer Ndeso</a>.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./dist/main.bundle.js"></script>
+</body>
+</html>
