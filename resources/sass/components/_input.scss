@@ -1,0 +1,43 @@
+.form-control {
+    &:focus {
+        border-color: $primary;
+    }
+}
+
+.input-group-plain {
+    border: 1px solid $input-border-color;
+    @include border-radius($input-border-radius, 0);
+    @include transition($input-transition);
+
+    &.focused {
+        border-color: $primary;
+        @if $enable-shadows {
+          @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+        } @else {
+          box-shadow: $input-focus-box-shadow;
+        }
+    }
+
+    .input-group-prepend,
+    .input-group-append {
+        .input-group-text,
+        .btn-append {
+            border-color: transparent;
+            background: transparent;
+            color: $input-color;
+            box-shadow: none;
+        }
+    }
+
+    .form-control {
+        border-color: transparent;
+        padding-left: .25rem;
+        padding-right: .25rem;
+        box-shadow: none !important;
+
+        &:focus {
+            border-color: transparent;
+            box-shadow: none !important;
+        }
+    }
+}

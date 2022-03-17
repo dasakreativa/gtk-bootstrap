@@ -1,0 +1,32 @@
+.btn-dim {
+    @each $color, $rgba in $theme-colors {
+        &-#{$color} {
+            @include button-dim-variant($rgba, $rgba);
+        }
+    }
+}
+
+.btn-dim-outline {
+    @each $color, $rgba in $theme-colors {
+        &-#{$color} {
+            @include button-outline-dim-variant($rgba);
+        }
+    }
+}
+
+.btn {
+    &-outline-light {
+        color: $dark;
+    }
+
+    &-dim-light {
+        color: $dark;
+        background: rgba($dark, 0.1);
+    }
+
+    &-dim-outline-light {
+        background: rgba($dark, 0.1);
+        color: $dark;
+        border: rgba($dark, 0.5);
+    }
+}

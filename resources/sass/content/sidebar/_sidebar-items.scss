@@ -1,0 +1,145 @@
+> ul.sidebar-menu {
+    padding: 0;
+    padding-top: 1rem;
+    list-style: none;
+
+    > li {
+        &.mm-active {
+            > a {
+                &.has-arrow::after {
+                    transform: rotate(90deg);
+                    transition: all 0.3s ease-out;
+                }
+            }
+        }
+
+        > a {
+            display: flex;
+            color: $dark;
+            padding: 0.5rem 0;
+            text-decoration: none;
+            align-items: center;
+
+            .icon {
+                font-size: 1.25em;
+            }
+
+            .title {
+                margin-left: .75rem;
+            }
+
+            &.has-arrow::after {
+                // Overiding Metismenu Style
+                width: unset;
+                height: unset;
+                border-width: unset;
+                border-style: unset;
+                border-color: unset;
+                right: unset;
+                transform: unset;
+                transform-origin: unset;
+                top: unset;
+                transition: all 0.3s ease-out; // Biarkan saja, karena buth animasi transisi buat muterin icon
+
+                // Default Style
+                margin-left: auto;
+                position: relative;
+                content: "\f054";
+                font-weight: 900;
+                min-width: 1.25rem;
+                align-items: center;
+                font-family: "Font Awesome 6 Free";
+                justify-content: center;
+                display: flex;
+            }
+
+            &:hover {
+                color: $primary;
+            }
+
+            &.active {
+                color: $primary;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        > li {
+            padding-left: 1.25rem;
+            margin-left: 0.75rem;
+            border-left: 1px solid $gray-200;
+
+            &.mm-active {
+                > a {
+                    &.has-arrow::after {
+                        transform: rotate(90deg);
+                        transition: all 0.3s ease-out;
+                    }
+                }
+            }
+
+            > a {
+                display: flex;
+                padding: 0.5rem 0;
+                color: $dark;
+                text-decoration: none;
+                align-items: center;
+
+                .icon {
+                    font-size: 1.25em;
+                }
+
+                .title {
+                    margin-left: .75rem;
+                }
+
+                &.has-arrow::after {
+                    // Overiding Metismenu Style
+                    width: unset;
+                    height: unset;
+                    border-width: unset;
+                    border-style: unset;
+                    border-color: unset;
+                    right: unset;
+                    transform: unset;
+                    transform-origin: unset;
+                    top: unset;
+                    transition: all 0.3s ease-out; // Biarkan saja, karena buth animasi transisi buat muterin icon
+
+                    // Default Style
+                    margin-left: auto;
+                    position: relative;
+                    content: "\f054";
+                    font-weight: 900;
+                    min-width: 1.25rem;
+                    align-items: center;
+                    font-family: "Font Awesome 6 Free";
+                    justify-content: center;
+                    display: flex;
+                }
+
+                &:hover {
+                    color: $primary;
+                }
+
+                &.active {
+                    color: $primary;
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                padding-left: unset;
+                margin-left: unset;
+                border-left: unset;
+            }
+        }
+    }
+}

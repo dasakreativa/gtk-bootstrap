@@ -1,0 +1,49 @@
+#masthead {
+    #navbar-main {
+        margin: 0.5rem;
+        background: white;
+        box-shadow: $box-shadow;
+        border-radius: $border-radius;
+
+        .navbar-nav {
+            align-items: center;
+
+            .userinfo {
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+
+                    &:after {
+                        display: none;
+                        content: '';
+                    }
+
+                    img {
+                        max-height: 30px;
+                        max-width: 30px;
+                    }
+                }
+            }
+        }
+
+        .navbar-brand {
+            transition: all .2s;
+
+            .img-full {
+                width: 100%;
+                padding: .5rem 1.5rem .5rem 0;
+            }
+
+            .img-mini {
+                width: 100%;
+                padding: .5rem 1.5rem .5rem 0;
+                display: none;
+            }
+
+            @include media-breakpoint-up("lg") {
+                width: calc(#{$sidebar-width} - 1rem);
+                border-right: 1px solid $gray-300;
+            }
+        }
+    }
+}

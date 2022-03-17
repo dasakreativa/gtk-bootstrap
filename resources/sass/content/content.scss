@@ -1,0 +1,21 @@
+#app {
+    @import "header-navs";
+
+    .content-wrap {
+        display: flex;
+        min-height: calc(100vh - 6rem);
+        height: 100%;
+        padding: 0.5rem;
+        padding-right: 0;
+
+        @import "sidebar/sidebar.scss";
+        @import "content-wrapper.scss";
+    }
+
+    &.toggled {
+        @import 'sidebar/sidebar-mini';
+        @import 'sidebar/sidebar-mobile';
+        @import 'title-mini';
+        @import "content-wrapper-mini.scss";
+    }
+}

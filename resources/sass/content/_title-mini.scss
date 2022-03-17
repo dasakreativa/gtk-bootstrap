@@ -1,0 +1,25 @@
+@include media-breakpoint-up('lg') {
+    #masthead #navbar-main .navbar-brand {
+        transition: all .2s;
+        width: 72px;
+
+        .img-full {
+            display: none;
+        }
+        .img-mini {
+            width: 75%;
+            padding: 0;
+            display: block;
+            animation: customwidth .2s;
+        }
+    }
+}
+
+@keyframes customwidth {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 75%;
+    }
+}

@@ -1,0 +1,19 @@
+.card {
+    &-widget {
+        border: 0;
+        box-shadow: $box-shadow;
+
+        .card-header {
+            background: $white;
+            border-color: $gray-200;
+
+            p,
+            h1, h2, h3, h4, h5, h6,
+            .h1, .h2, .h3, .h4, .h5, .h6 {
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

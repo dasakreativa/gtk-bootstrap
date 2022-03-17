@@ -1,0 +1,30 @@
+/**
+ * Garuda Admin Kit
+ * Template admin multi fungsi untuk berbagai keperluan pembangunan website
+ * Copyright 2021-2022 Dasa Kreativa Group
+ * Copyright 2021-2022 Programmer Ndeso
+ */
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+// Overriding Variables & Bootstrap
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+
+// Mixins
+@import 'mixins/buttons';
+
+// The Components
+@import 'components/card';
+@import 'components/button';
+@import 'components/input';
+@import 'components/dropdown';
+
+// The Sidebars
+@import 'content/content.scss';
+@import 'widgets/widget-main.scss';
+
+// Plugins
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import '~metismenu/dist/metisMenu.css';
+@import '~sweetalert2/dist/sweetalert2.min.css';

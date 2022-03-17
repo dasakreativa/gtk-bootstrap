@@ -1,0 +1,13 @@
+main#main-content {
+    width: calc(100% - #{$sidebar-width} - 1rem);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include media-breakpoint-down('md') {
+        width: 100%;
+        margin: 1rem 1rem 0 1rem !important;
+    }
+}
