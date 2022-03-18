@@ -1,0 +1,10 @@
+#app {
+    .login-wrapper {
+        min-height: 100vh;
+        padding: 1rem;
+        display: flex;
+
+        @import 'login/form';
+        @import 'login/banner';
+    }
+}

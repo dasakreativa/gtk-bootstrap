@@ -1,3 +1,6 @@
 require('@fortawesome/fontawesome-free');
 require('metismenu');
-require('sweetalert2');
+
+try {
+    window.Swal = require('sweetalert2');
+} catch(e) {}

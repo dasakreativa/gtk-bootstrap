@@ -13,18 +13,26 @@
 
 // Mixins
 @import 'mixins/buttons';
+@import 'mixins/alerts';
 
 // The Components
 @import 'components/card';
 @import 'components/button';
 @import 'components/input';
 @import 'components/dropdown';
+@import 'components/alert';
 
 // The Sidebars
 @import 'content/content.scss';
 @import 'widgets/widget-main.scss';
 
+// Pages
+@import 'pages/login.scss';
+
 // Plugins
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import '~metismenu/dist/metisMenu.css';
 @import '~sweetalert2/dist/sweetalert2.min.css';
+
+// Customizing Plugins
+@import 'custom/jqvmap';

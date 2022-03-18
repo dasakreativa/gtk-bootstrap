@@ -1,0 +1,43 @@
+.widget.widget-statistic-plain {
+    display: flex;
+    border-radius: .5rem;
+    padding: 1rem;
+
+    @each $color, $rgba in $theme-colors {
+        &.widget-#{$color} {
+            background: $white;
+            color: $dark;
+            box-shadow: $box-shadow;
+
+            .widget-icon .fa-solid {
+                background: rgba($rgba, 0.25);
+                color: $rgba;
+            }
+        }
+    }
+
+    .widget-icon .fa-solid {
+      width: 65px;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5em;
+      border-radius: 50%;
+    }
+
+    .widget-content {
+      margin-left: 1rem;
+      text-align: right;
+      flex: 1;
+
+      .widget-counter {
+        font-size: 1.75em;
+        font-weight: bold;
+      }
+
+      .widget-title {
+        font-weight: 500;
+      }
+    }
+  }

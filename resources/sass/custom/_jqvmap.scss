@@ -1,0 +1,22 @@
+.jqvmap-zoomin, .jqvmap-zoomout {
+    position: absolute;
+    left: .5rem;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    border-radius: $border-radius;
+    background: $dark;
+    padding: unset;
+    color: $white;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    line-height: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.jqvmap-zoomout {
+    top: 40px;
+}

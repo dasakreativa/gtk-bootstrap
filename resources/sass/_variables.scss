@@ -101,10 +101,17 @@ $border-radius:               .5rem !default;
 $border-radius-lg:            .65rem !default;
 $border-radius-sm:            .3rem !default;
 
+$custom-checkbox-indicator-border-radius:       $border-radius-sm !default;
+
+// Alerts
+$alert-bg-level:                    -1 !default;
+$alert-border-level:                0 !default;
+$alert-color-level:                 6 !default;
+
 // Box Shadow
-$box-shadow-sm:               0 0.1rem 1rem $gray-200 !default;
-$box-shadow:                  0 0.5rem 1rem $gray-200 !default;
-$box-shadow-lg:               0 0.25rem 2rem $gray-300 !default;
+$box-shadow-sm:               0 0.1rem 1rem rgba($dark, .05) !default;
+$box-shadow:                  0 0.5rem 1rem rgba($dark, .075) !default;
+$box-shadow-lg:               0 0.25rem 2rem rgba($dark, .15) !default;
 
 // Sidebar
 $sidebar-width:               280px !default;
