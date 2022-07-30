@@ -1,0 +1,319 @@
+// Default Form Custom
+.fc {
+    position: relative;
+
+    label.fc-label {
+        transition: all .2s;
+        border: 1px solid $border-color;
+        padding: 1rem;
+        padding-left: 3rem;
+        border-radius: $border-radius;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        position: relative;
+        margin-bottom: 1rem;
+        z-index: 2;
+
+        &:before {
+            transition: all .2s;
+            content: '';
+            border: 1px solid $border-color;
+            border-radius: 50%;
+            width: 1.25rem;
+            height: 1.25rem;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            margin-right: 1rem;
+            z-index: 997;
+        }
+
+        &:after {
+            font-size: .7rem;
+            transition: all .2s;
+            content: '\f00c';
+            border: 1px solid $primary;
+            color: $white;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            background: $primary;
+            z-index: 999;
+            border-radius: 50%;
+            width: 1.25rem;
+            height: 1.25rem;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            opacity: 0;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .label-body {
+            .label-title {
+                font-size: $font-size-base * 1.25;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &[data-label] {
+        span.form-control-after {
+            transition: all .2s;
+            z-index: 998;
+            top: .925rem;
+            position: absolute;
+            left: 1.325rem;
+        }
+    }
+
+    input.fc-input {
+        z-index: 3;
+        position: absolute;
+        opacity: 0;
+        outline: none;
+        top: 1.3rem;
+        left: 1.3rem;
+
+        &:checked ~ label.fc-label {
+            border-color: $primary;
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.fc-solid {
+        input.fc-input:checked ~ label.fc-label {
+            background: $primary;
+            color: $white;
+
+            &:after, &:before {
+                border-color: $white;
+                background: $white;
+                color: $primary;
+            }
+        }
+    }
+
+    label.fc-label.fc-label-squared {
+        &:before, &:after, &.form-control-after {
+            border-radius: $border-radius;
+        }
+    }
+}
+
+.fc-group {
+    display: flex;
+    flex-direction: column;
+
+    .fc {
+        flex: 1;
+
+        label.fc-label {
+            border-radius: 0;
+            border-top-color: transparent;
+            margin-bottom: 0;
+        }
+    
+        &:last-child label.fc-label {
+            border-top-color: transparent;
+            border-right-color: $border-color;
+            border-radius: 0 0 $border-radius $border-radius;
+            margin-bottom: 1rem;
+        }
+
+        &:first-child label.fc-label {
+            border-top-color: $border-color;
+            border-right-color: $border-color;
+            border-radius: $border-radius $border-radius 0 0;
+        }
+    }
+
+    &.fc-gutter {
+        display: grid;
+        grid-template-columns: calc(33.33% - 1rem) calc(33.33% - 1rem) calc(33.33% - 1rem);
+        gap: 1rem;
+
+        .fc {
+            label.fc-label {
+                border-radius: $border-radius;
+                border-color: $border-color;
+            }
+        }
+    }
+}
+
+// Form Floating
+.form-floating {
+    position: relative;
+    margin-bottom: .5rem;
+    
+    + .form-floating {
+        margin-top: 1.25rem;
+    }
+
+    label.form-floating-label {
+        background: $white;
+        position: absolute;
+        top: .5rem;
+        left: .75rem;
+        top: 0.35rem;
+        margin: 0;
+        padding: 0.25rem;
+        transition: all .2s;
+        line-height: 1;
+    }
+
+    input.form-control {
+        color: lighten($dark, 40%);
+        
+        &::-webkit-input-placeholder {
+            opacity: 0;
+            transition: inherit;
+            transition: all .2s;
+        }
+
+        &:placeholder-shown {
+            opacity: 1;
+        }
+
+        &:focus {
+            & ~ label.form-floating-label {
+                color: $primary;
+            }
+
+            &::-webkit-input-placeholder {
+                opacity: 1;
+            }
+        }
+
+        &:not(:placeholder-shown) + label.form-floating-label,
+        &:focus + label.form-floating-label {
+            opacity: 1;
+            padding: 0 0.1rem;
+            margin-top: -0.75rem;
+            font-size: .875em;
+        }
+    }
+}
+
+.form-floating {
+    &.form-lg {
+        label.form-floating-label {
+            font-size: 1.125rem;
+            top: 0.625rem;
+        }
+
+        input.form-control {
+            &:not(:placeholder-shown) + label.form-floating-label,
+            &:focus + label.form-floating-label {
+                opacity: 1;
+                padding: 0 0.1rem;
+                margin-top: -1rem;
+                font-size: .9em;
+            }
+        }
+    }
+
+    &.form-sm {
+        label.form-floating-label {
+            font-size: .9em;
+            margin-top: -0.1rem;
+            margin-left: -0.4rem;
+        }
+
+        input.form-control {
+            &:not(:placeholder-shown) + label.form-floating-label,
+            &:focus + label.form-floating-label {
+                opacity: 1;
+                padding: 0 0.1rem;
+                margin-top: -1rem;
+                font-size: .9em;
+            }
+        }
+    }
+}
+
+// Form Password Show Hide
+.form-password {
+    position: relative;
+
+    input.form-control {
+        padding-right: 3rem;
+    }
+
+    .form-btn-password {
+        position: absolute;
+        border: 0;
+        top: 0.375rem;
+        right: 0.5rem;
+        color: $body-color;
+        background: $white;
+        border-left: 1px solid $border-color;
+        padding-left: 0.75rem;
+        padding-right: 0.5rem;
+
+        i, svg {
+            min-width: 1.25rem;
+        }
+    }
+
+    &-sm {
+        position: relative;
+
+        input.form-control {
+            padding-right: 2.5rem;
+        }
+    
+        .form-btn-password {
+            position: absolute;
+            border: 0;
+            top: 0.25rem;
+            right: 0.5rem;
+            color: $body-color;
+            background: $white;
+            border-left: 1px solid $border-color;
+            padding-left: 0.5rem;
+            padding-right: 0.25rem;
+            font-size: .9em;
+
+            i, svg {
+                min-width: 1.25rem;
+            }
+        }
+    }
+
+    &-lg {
+        position: relative;
+
+        input.form-control {
+            padding-right: 3rem;
+        }
+    
+        .form-btn-password {
+            position: absolute;
+            border: 0;
+            top: 0.45rem;
+            right: 0.5rem;
+            color: $body-color;
+            background: $white;
+            border-left: 1px solid $border-color;
+            padding-left: 0.75rem;
+            padding-top: 0.25rem;
+            padding-right: 0.5rem;
+            padding-bottom: 0.25rem;
+
+            i, svg {
+                min-width: 1.25rem;
+            }
+        }
+    }
+}

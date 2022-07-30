@@ -1,0 +1,70 @@
+// Colors Properties
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #1778EB !default;
+$indigo:  #7F0CF5 !default;
+$purple:  #5C11A8 !default;
+$pink:    #F0386B !default;
+$red:     #F23030 !default;
+$orange:  #F28705 !default;
+$yellow:  #FFB000 !default;
+$green:   #0BD39A !default;
+$teal:    #0FFF95 !default;
+$cyan:    #51B4fD !default;
+
+$yiq-contrasted-threshold:  200 !default;
+
+$primary:       $blue !default;
+$secondary:     $purple !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+// Body and Font Color
+$body-color: #3d3d3d;
+
+// Box Shadow
+$box-shadow:	                0 0.25rem 1rem rgba($dark, 5%);
+$box-shadow-lg:	                0 0.5rem 1.25rem rgba($dark, 10%);
+$box-shadow-sm:	                0 .25rem .5rem rgba($dark, 5%);
+
+// Border Properties
+$border-radius:                 .5rem !default;
+$border-radius-lg:              .65rem !default;
+$border-radius-sm:              .3rem !default;
+
+$custom-checkbox-indicator-border-radius: $border-radius-sm !default;
+
+// Fonts
+$headings-font-family:			-apple-system, BlinkMacSystemFont, "Poppins", "Roboto", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:		-apple-system, BlinkMacSystemFont, "Poppins", "Roboto", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:			SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:				$font-family-sans-serif !default;
+$headings-font-weight:			700 !default;
+$font-size-base:				.875rem !default;
+
+// Sidebar
+$sidebar-width:                 275px !default;
+$sidebar-border-width:          1px !default;
+$sidebar-padding-y:             1.25rem !default;
+$sidebar-padding-x:             .5rem !default;
+$sidebar-border-type:           solid !default;
+$sidebar-border-color:          $gray-200 !default;
+$sidebar-background-color:      $gray-100 !default;
+$sidebar-text-color:            $gray-600 !default;
+$sidebar-heading-color:         $gray-700 !default;
+$sidebar-heading-font:          $headings-font-family !default;
+$sidebar-text-font:             $font-family-base !default;

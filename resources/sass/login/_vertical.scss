@@ -1,0 +1,80 @@
+[data-layout=vertical] {
+    main#app {
+        display: flex;
+        
+        .login-wrapper {
+            display: flex;
+            flex-direction: column;
+            background-color: $white;
+            width: 27rem;
+            min-height: 100vh;
+            border-right: 1px solid $gray-300;
+            padding: 2rem;
+
+            @include media-breakpoint-down('md') {
+                width: 50%;
+            }
+
+            @include media-breakpoint-down('sm') {
+                width: 100%;
+            }
+
+            .login-logo {
+                display: flex;
+                margin-bottom: 3rem;
+
+                img {
+                    height: 30px;
+                    max-height: 50px;
+                }
+            }
+
+            .login-body {
+                margin: auto 0;
+            }
+            
+            .register-wrapper {
+                margin-top: 1rem;
+            }
+
+            .footer-wrapper {
+                margin-top: 3rem;
+                text-align: center;
+                font-size: .95em;
+                color: $gray-600;
+            }
+        }
+
+        .content-wrapper {
+            width: calc(100% - 27rem);
+            padding: 3rem;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background: url('../../../public/images/background-login-default.jpg') no-repeat center center;
+            background-size: cover;
+
+            @include media-breakpoint-down('md') {
+                width: 50%;
+            }
+
+            @include media-breakpoint-down('sm') {
+                display: none;
+            }
+
+            .login-caption {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                padding: 3rem 2rem 2rem;
+                background: linear-gradient(to top, $gray-900 2.5%, rgba($gray-900, 65%) 75%, transparent);
+                color: $white;
+
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

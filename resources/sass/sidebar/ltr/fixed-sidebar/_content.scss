@@ -1,0 +1,22 @@
+[data-layout=fixed-sidebar] #content-wrapper {
+    margin-left: #{$sidebar-width};
+    padding-top: 4rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-breakpoint-down('md') {
+        margin: 0;
+    }
+
+    .body-content {
+        padding: 1rem;
+    }
+
+    footer.footer {
+        margin-top: auto;
+        padding: 1rem;
+        border-top: $sidebar-border-width $sidebar-border-type $sidebar-border-color;
+    }
+}

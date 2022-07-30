@@ -1,0 +1,90 @@
+ul.sidemenu {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    li.nav-heading {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .1rem;
+        font-size: .75em;
+        padding: 0.65rem 0.75rem;
+        color: $gray-600;
+    }
+
+    li.nav-item {
+        position: relative;
+
+        + .nav-heading {
+            margin-top: 0.75rem;
+        }
+
+        &.has-arrow {
+            > .nav-link {
+                &::after {
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    content: "\f054";
+                    position: absolute;
+                    right: 1rem;
+                    top: 0.6825rem;
+                    transition: all 0.2s;
+                    align-items: center;
+                    min-width: 1.25rem;
+                    min-height: 1.25rem;
+                    font-size: .9em;
+                    transform: rotate(0);
+                    justify-content: center;
+                    display: flex;
+                }
+            }
+            
+            &.active > .nav-link {
+                color: $primary;
+
+                &::after {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .nav-link {
+            padding: 0.62rem 1rem;
+            color: $gray-700;
+            display: flex;
+            align-items: center;
+            transition: all .2s;
+            position: relative;
+
+            .nav-icon {
+                min-width: 1.25rem;
+                margin-right: .35rem;
+            }
+
+            &:hover, &:active {
+                color: $primary;
+            }
+        }
+    }
+
+    ul.submenu {
+        list-style: none;
+        padding-left: 1.75rem;
+        display: none;
+    }
+}
+
+ul.submenu {
+    li.nav-item {
+        a.nav-link {
+            padding: .4rem 1rem;
+            font-size: .9em
+        }
+    }
+}
+
+ul.submenu ul.submenu {
+    padding-left: 1rem;
+}

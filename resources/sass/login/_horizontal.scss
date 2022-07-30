@@ -1,0 +1,54 @@
+[data-layout=horizontal] {
+    main#app {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: $gray-100;
+
+        .login-wrapper {
+            width: 27.5%;
+
+            @include media-breakpoint-down('md') {
+                width: 100%;
+            }
+
+            .card {
+                box-shadow: $box-shadow;
+                border: 0;
+    
+                .card-header {
+                    padding: 1.25rem;
+                    background-color: $white;
+                    border-color: $gray-100;
+                    border-top: 2px solid $primary;
+                    font-size: 1rem;
+                }
+            }
+            
+            .social-login {
+                text-align: center;
+                margin-top: 1.125rem;
+                border-top: 1px solid $gray-200;
+                padding-top: 1.125rem;
+              
+                .social-button {
+                    display: grid;
+                    gap: .5rem;
+                    grid-template-columns: 50% 50%;
+                }
+              
+                .btn {
+                    text-align: left;
+                    padding: .75rem 1.125rem;
+                    font-size: 1.125em;
+                }
+            }
+
+            .footer-wrapper {
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

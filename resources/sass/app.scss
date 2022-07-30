@@ -1,0 +1,23 @@
+/*!
+ * Garuda Admin Kit
+ * Template Bootstrap yang didesain untuk berbagai keperluan dan berbagai platform.
+ * 
+ * @version 1.0.0-beta.20220703
+ * @author Dasa Kreativa Studio (Copyright 2021-2022)
+ * @author Programmer Ndeso (Copyright 2021-2022)
+ */
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+// Bootstrap
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+
+// Component
+@import './components';
+@import './sidebar';
+@import './login';
+@import './widgets';
+
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '~remixicon/fonts/remixicon.css';
